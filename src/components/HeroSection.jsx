@@ -9,8 +9,8 @@ const HeroSection = () => {
     <>
     <Row>
         <Col  className='d-flex  justify-content-center align-items-center flex-column' >
-        <h4>Place Your</h4>
-        <h1>ORDER NOW !!</h1>
+        <h4 className='py-2' style={{textAlign:"left"}}>Place Your</h4>
+        <h1 className='pb-3' style={{textAlign:"left"}}>ORDER NOW !!</h1>
         <Form
             name="complex-form"
             labelCol={{
@@ -26,6 +26,7 @@ const HeroSection = () => {
             <Row>
                 <Col className='d-flex justify-content-end'>
                 <Input
+                    size="large"
                     style={{
                         width: 160,
                     }}
@@ -34,6 +35,7 @@ const HeroSection = () => {
                 </Col>
                 <Col className='d-flex justify-content-start'>
                 <Input
+                    size="large"                
                     style={{
                         width: 160,
                     }}
@@ -43,21 +45,21 @@ const HeroSection = () => {
             </Row>
             <Row className='py-3'>
                 <Col className='d-flex align-items-end  justify-content-end'>
-                <Select placeholder="Select province" style={{width:"160px"}} >
+                <Select size="large" placeholder="Select province" style={{width:"160px"}} >
                     <Option value="Zhejiang">Zhejiang</Option>
                     <Option value="Jiangsu">Jiangsu</Option>
                 </Select>
                 </Col>
                 <Col  className='d-flex justify-content-start'>
-                <Select placeholder="Select province"   style={{width:"160px"}}>
+                <Select size="large" placeholder="Select province"   style={{width:"160px"}}>
                     <Option value="Zhejiang">Zhejiang</Option>
                     <Option value="Jiangsu">Jiangsu</Option>
                 </Select>
                 </Col>
             </Row>
                <Row>
-                <Col className='d-flex justify-content-end'>
-                    <Button variant='success'>ORDER NOW</Button>
+                <Col className='d-flex justify-content-end '>
+                    <Button  variant='outline-success' style={{width:"160px"}}>ORDER NOW</Button>
                 </Col>
                 <Col></Col>
                </Row>
