@@ -1,22 +1,21 @@
-import "./App.css";
-import HeroSection from "./components/HeroSection";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavbarComponent from "./components/NavbarComponent";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-import Services from "./components/Services";
-import About from "./components/About";
-import Value from "./components/Value";
 import Footer from "./components/Footer";
+import LandingPage from "./components/LandingPage";
+import SignUp from "./components/seller/SignUp";
+
 function App() {
   return (
-    <div className="App">
-      <NavbarComponent />
-      <HeroSection />
-      <Services />
-      <About />
-      <Value />
-      <Footer />
-    </div>
+    <>
+      <Router>
+        <NavbarComponent />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/SignUp" element={<SignUp />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
   );
 }
 
